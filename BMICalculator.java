@@ -39,12 +39,17 @@ public class BMICalculator {
     
     public String classification3( double BMI ) {
         
-        String result3 = null;
-        
+        String result3 = 
+            (BMI <= 18.5) ? "Low" : 
+            (BMI >= 18.5 && BMI <= 25) ? "Normal(Healty weight" :
+            (BMI > 25) ? "High" : null; 
+
+// Alternative solution to calculate low, normal and high values
+        /*
         if  (BMI <= 18.5) {result3 = "Low";}
         if  (BMI >= 18.5 && BMI <= 25) {result3 = "Normal(Healty weight)";}
         if  (BMI > 25) {result3 = "High";}
-
+*/
         return result3;  
         
     
@@ -52,3 +57,4 @@ public class BMICalculator {
     
     
 }
+
