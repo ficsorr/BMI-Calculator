@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package assignment1;
 
 /**
@@ -10,28 +5,23 @@ package assignment1;
  * @author attilameszaros
  */
 public class BMICalculator {
- 
-    // local variable declarations go here
-		
-                String result3;
-                String result8;
-                String classification3;
-		String message;
-                double BMI;
-        
-    public BMICalculator() {
    
+    public BMICalculator() {
     }
+    
+ // Return BMI 
     
     public double value( double weight, double height ) {
     
-        BMI = weight/(height*height);   
+        double BMI = weight/(height*height);   
         return BMI; 
     }
 
-    // return the 8 category (Wikipedia) classification for this BMI
+// return the 8 category (Wikipedia) classification for this BMI
+    
     public String classification8( double BMI ) {
-
+        
+        String result8 = null;
         if  (BMI <= 15) {result8 = "Very severely underweight";}
         if  (BMI >= 15 && BMI <= 16) {result8 = "Severely underweight";}
         if  (BMI >= 16 && BMI <= 18.5) {result8 = "Underweight";}
@@ -46,8 +36,11 @@ public class BMICalculator {
     }
     
 // return the 3 category (high, normal, low) classification for this BMI     
+    
     public String classification3( double BMI ) {
-
+        
+        String result3 = null;
+        
         if  (BMI <= 18.5) {result3 = "Low";}
         if  (BMI >= 18.5 && BMI <= 25) {result3 = "Normal(Healty weight)";}
         if  (BMI > 25) {result3 = "High";}
